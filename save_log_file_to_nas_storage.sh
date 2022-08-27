@@ -11,7 +11,7 @@
 #
 #Version: 0.0  - Start writing script
 #         0.1  - moving credentials from script to file
-#         1.0  - moving identifyable information to files instead of from the scrip
+#         1.0  - moving identifyable information to files instead of from the script
 # 
 #VARS
 SJSTORAGEIP=$(cat nas_ip.txt)
@@ -33,7 +33,7 @@ fi
 #rename output file to identifiable name (by serial)
 mv $LOG_FILE $SERIAL-$LOG_FILE
   
-#Install sshpass, if not installed, for non-scp interactive copy to pbs_logs share
+#Install sshpass, if not installed, for passwordless non-scp/ssh  to pbs_logs share
 if ! [ $(which sshpass) ]; then
      echo "Installing sshpass for non-interactive ssh/scp..."
     apt-get update
