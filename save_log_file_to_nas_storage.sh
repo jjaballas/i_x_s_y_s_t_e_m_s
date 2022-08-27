@@ -48,4 +48,4 @@ sshpass -f .creds ssh -o StrictHostKeyChecking=no -l $NAS_USER $SJSTORAGEIP "mkd
 echo "scp $SERIAL-$LOG_FILE $NAS_USER@$SJSTORAGEIP:/mnt/tank/pbs/pbsv4/pbs_logs/$CUST_FOLDER/$SERIAL/"
 sshpass -f .creds scp -o StrictHostKeyChecking=no $SERIAL-$LOG_FILE $NAS_USER@$SJSTORAGEIP:/mnt/tank/pbs/pbsv4/pbs_logs/Zoox/$SERIAL/
 
-echo -e -n "\n\nSuccessfully saved stress output to https://archive.pbs.ixsystems.com/pbsv4/pbs_logs/$CUST_FOLDER/$SERIAL/\n"
+echo -e -n "\n\nSuccessfully saved stress output to https://$SJSTORAGEIP/pbsv4/pbs_logs/$CUST_FOLDER/$SERIAL/\n"
